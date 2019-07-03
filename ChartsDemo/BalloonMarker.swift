@@ -152,8 +152,6 @@ open class BalloonMarker: MarkerImage
                 x: rect.origin.x + rect.size.width-radius,
                 y: rect.origin.y))
             
-            //this may be rotating the arc multiple times and could casue issues down the road
-            //although works for in the meanwhile (same for instances of addArc below)
             context.addArc(center: center, radius: radius, startAngle: CGFloat((3/2)*Double.pi), endAngle: CGFloat(0.0), clockwise: false)
             context.addLine(to: CGPoint(
                 x: rect.origin.x + rect.size.width,
